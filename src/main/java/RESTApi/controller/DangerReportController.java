@@ -18,7 +18,7 @@ public class DangerReportController {
     DangerReportService dangerReportService;
 
     @GetMapping("")
-    public List<DangerReport> list(@RequestParam(required = false) Integer dangerous) {
+    public List<DangerReport> list(@RequestParam(required = false) Boolean dangerous) {
         if (dangerous != null)
             return dangerReportService.listAllDangerReportsByDanger(dangerous);
         else

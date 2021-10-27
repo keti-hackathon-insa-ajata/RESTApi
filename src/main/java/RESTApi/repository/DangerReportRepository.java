@@ -8,9 +8,6 @@ import java.util.List;
 
 public interface DangerReportRepository extends JpaRepository<DangerReport, Integer>{
 
-    @Query(value = "SELECT * FROM DANGERREPORTS", nativeQuery = true)
-    List<DangerReport> findAllInfos();
-
     @Query(value = "SELECT * FROM DANGERREPORTS WHERE DANGEROUS = ?1", nativeQuery = true)
-    List<DangerReport> findAllInfosByDanger(int dangerous);
+    List<DangerReport> findAllInfosByDanger(boolean dangerous);
 }

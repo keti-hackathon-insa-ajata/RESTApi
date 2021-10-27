@@ -19,7 +19,7 @@ public class DangerReport {
     @Column(name = "longitude", nullable=false)
     private float longitude;
     @Column(name = "dangerous", nullable=false)
-    private int dangerous;
+    private boolean dangerous;
 
     public DangerReport() {
     }
@@ -27,7 +27,7 @@ public class DangerReport {
     public DangerReport(float timestamp, float vehicleDistance,
                         float vehicleSpeed, float bikeSpeed,
                         float latitude, float longitude,
-                        int dangerous) {
+                        boolean dangerous) {
         this.timestamp = timestamp;
         this.vehicleDistance = vehicleDistance;
         this.vehicleSpeed = vehicleSpeed;
@@ -70,7 +70,7 @@ public class DangerReport {
     }
 
     @Column(name = "dangerous")
-    public int getDangerous() {
+    public boolean getDangerous() {
         return dangerous;
     }
 }

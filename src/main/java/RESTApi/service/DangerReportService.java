@@ -14,10 +14,10 @@ public class DangerReportService {
     private DangerReportRepository dangerReportRepository;
 
     public List<DangerReport> listAllDangerReports() {
-        return dangerReportRepository.findAllInfos();
+        return dangerReportRepository.findAll();
     }
 
-    public List<DangerReport> listAllDangerReportsByDanger(int dangerous) {
+    public List<DangerReport> listAllDangerReportsByDanger(boolean dangerous) {
         return dangerReportRepository.findAllInfosByDanger(dangerous);
     }
 

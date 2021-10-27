@@ -1,4 +1,5 @@
 ## MySQL - create the database and the table
+```
 CREATE database DB;
 CREATE table DB.dangerReports(
 timestamp float NOT NULL,
@@ -9,3 +10,4 @@ latitude float NOT NULL,
 longitude float NOT NULL,
 dangerous bool NOT NULL
 );
+```

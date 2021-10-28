@@ -8,12 +8,12 @@ public class DangerReport {
     @Id
     @Column(name = "timestamp", nullable=false)
     private float timestamp;
-    @Column(name = "vehicledistance", nullable=false)
-    private float vehicleDistance;
-    @Column(name = "vehiclespeed", nullable=false)
-    private float vehicleSpeed;
-    @Column(name = "bikespeed", nullable=false)
-    private float bikeSpeed;
+    @Column(name = "distance", nullable=false)
+    private float distance;
+    @Column(name = "object_speed", nullable=false)
+    private float objectSpeed;
+    @Column(name = "bicycle_speed", nullable=false)
+    private float bicycleSpeed;
     @Column(name = "latitude", nullable=false)
     private float latitude;
     @Column(name = "longitude", nullable=false)
@@ -24,14 +24,14 @@ public class DangerReport {
     public DangerReport() {
     }
 
-    public DangerReport(float timestamp, float vehicleDistance,
-                        float vehicleSpeed, float bikeSpeed,
+    public DangerReport(float timestamp, float distance,
+                        float objectSpeed, float bicycleSpeed,
                         float latitude, float longitude,
                         boolean dangerous) {
         this.timestamp = timestamp;
-        this.vehicleDistance = vehicleDistance;
-        this.vehicleSpeed = vehicleSpeed;
-        this.bikeSpeed = bikeSpeed;
+        this.distance = distance;
+        this.objectSpeed = objectSpeed;
+        this.bicycleSpeed = bicycleSpeed;
         this.latitude = latitude;
         this.longitude = longitude;
         this.dangerous = dangerous;
@@ -44,19 +44,19 @@ public class DangerReport {
         return timestamp;
     }
 
-    @Column(name = "vehicledistance")
-    public float getVehicleDistance() {
-        return vehicleDistance;
+    @Column(name = "distance")
+    public float getDistance() {
+        return distance;
     }
 
-    @Column(name = "vehiclespeed")
-    public float getVehicleSpeed() {
-        return vehicleSpeed;
+    @Column(name = "object_speed")
+    public float getObjectSpeed() {
+        return objectSpeed;
     }
 
-    @Column(name = "bikespeed")
-    public float getBikeSpeed() {
-        return bikeSpeed;
+    @Column(name = "bicycle_speed")
+    public float getBicycleSpeed() {
+        return bicycleSpeed;
     }
 
     @Column(name = "latitude")

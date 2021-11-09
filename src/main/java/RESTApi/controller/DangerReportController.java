@@ -17,7 +17,7 @@ public class DangerReportController {
     @Autowired
     DangerReportService dangerReportService;
 
-    @CrossOrigin()
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("")
     public List<DangerReport> list(@RequestParam(required = false) Boolean dangerous) {
         if (dangerous != null)
@@ -36,7 +36,7 @@ public class DangerReportController {
 //        }
 //    }
 
-    @CrossOrigin()
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("")
     public void add(@RequestBody DangerReport dangerReport) {
         dangerReportService.saveDangerReport(dangerReport);

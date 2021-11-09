@@ -1,5 +1,5 @@
 ## MySQL - create the database and the table
-```
+```sql
 CREATE database DB;
 CREATE table DB.dangerReports(
 id int NOT NULL AUTO_INCREMENT,

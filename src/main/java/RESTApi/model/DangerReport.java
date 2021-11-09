@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class DangerReport {
     @Id
     @Column(name = "timestamp", nullable=false)
-    private float timestamp;
+    private int timestamp;
     @Column(name = "distance", nullable=false)
     private float distance;
     @Column(name = "object_speed", nullable=false)
@@ -24,7 +24,7 @@ public class DangerReport {
     public DangerReport() {
     }
 
-    public DangerReport(float timestamp, float distance,
+    public DangerReport(int timestamp, float distance,
                         float objectSpeed, float bicycleSpeed,
                         float latitude, float longitude,
                         boolean dangerous) {
@@ -40,7 +40,7 @@ public class DangerReport {
 //other setters and getters
 
     @Column(name = "timestamp")
-    public float getTimestamp() {
+    public int getTimestamp() {
         return timestamp;
     }
 

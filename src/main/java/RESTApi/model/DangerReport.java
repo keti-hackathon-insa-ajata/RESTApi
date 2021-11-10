@@ -11,9 +11,9 @@ public class DangerReport {
     @Column(name = "distance", nullable=false)
     private float distance;
     @Column(name = "object_speed", nullable=false)
-    private float objectSpeed;
+    private float object_speed;
     @Column(name = "bicycle_speed", nullable=false)
-    private float bicycleSpeed;
+    private float bicycle_speed;
     @Column(name = "latitude", nullable=false)
     private float latitude;
     @Column(name = "longitude", nullable=false)
@@ -30,8 +30,8 @@ public class DangerReport {
                         boolean dangerous) {
         this.timestamp = timestamp;
         this.distance = distance;
-        this.objectSpeed = objectSpeed;
-        this.bicycleSpeed = bicycleSpeed;
+        this.object_speed = objectSpeed;
+        this.bicycle_speed = bicycleSpeed;
         this.latitude = latitude;
         this.longitude = longitude;
         this.dangerous = dangerous;
@@ -51,12 +51,12 @@ public class DangerReport {
 
     @Column(name = "object_speed")
     public float getObjectSpeed() {
-        return objectSpeed;
+        return object_speed;
     }
 
     @Column(name = "bicycle_speed")
     public float getBicycleSpeed() {
-        return bicycleSpeed;
+        return bicycle_speed;
     }
 
     @Column(name = "latitude")

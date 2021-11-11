@@ -6,6 +6,8 @@ import javax.persistence.*;
 @Table(name = "dangerreports")
 public class DangerReport {
     @Id
+    @Column(name = "id", nullable = false)
+    private int id;
     @Column(name = "timestamp", nullable=false)
     private int timestamp;
     @Column(name = "distance", nullable=false)

@@ -1,11 +1,23 @@
 ## Prerequisites 
   * Maven
   * Java 8
-  * MYSQL
+  * MySQL
 
-## MySQL - create the database and the table
+## MySQL Initialization
+
+- Create the database :
 ```sql
 CREATE database DB;
+```
+
+- Create a user and give permissions : 
+```sql
+CREATE USER 'root'@'localhost' IDENTIFIED BY '';
+GRANT ALL PRIVILEGES ON DB.* TO 'root'@'localhost';
+```
+
+- Create the table :
+```sql
 CREATE table DB.dangerReports(
 id int NOT NULL AUTO_INCREMENT,
 timestamp int NOT NULL,
@@ -47,4 +59,13 @@ Example
     "latitude": 43.57037533253987,
     "longitude": 1.468026024931181
 }
+```
+
+## Optional configuration
+If you want to run the REST API on a different port, or to change the database user, you can configure the file /src/main/resources/application.properties: 
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/DB
+spring.datasource.username=root
+spring.datasource.password=
+server.port=12345
 ```

@@ -1,6 +1,7 @@
 ## Prerequisites 
   * Maven
   * Java 8
+  * MYSQL
 
 ## MySQL - create the database and the table
 ```sql

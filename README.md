@@ -35,3 +35,16 @@ java -jar RestApi.jar
   * GET requests are used to get the data
   * We can filter the data to get only the dangerous reports by accessing http://localhost:12345/dangerReports?dangerous=true (on the server, or replace "localhost" with the IP address of the server)
   * POST requests are used to create new danger reports
+
+## JSON format for POST requests
+Example
+```json
+{
+    "timestamp": 1635497504,
+    "distance": 300.0,
+    "object_speed": 60.0,
+    "bicycle_speed": 7.0,
+    "latitude": 43.57037533253987,
+    "longitude": 1.468026024931181
+}
+```

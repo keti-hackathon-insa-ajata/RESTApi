@@ -1,4 +1,15 @@
+# Central server Rest API
+
+REST Api for the central server database (link between Monitor and database)
+
+## Git
+To retrieve the project, run :
+```
+git clone https://github.com/keti-hackathon-insa-ajata/RESTApi.git
+```
+
 ## Prerequisites 
+  * Git
   * Maven
   * Java 8
   * MySQL
